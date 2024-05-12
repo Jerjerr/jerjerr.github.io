@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery Blog</title>
+    <link rel="stylesheet" href="zoo.css">
+    <style>
+        .text-box {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex; 
+            max-width: 800px; 
+            width: 100%; 
+        }
+
+        .text-box p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-left: 20px; 
+        }
+
+        #dimg {
+            max-width: 100%;
+            height: auto;
+            margin-right: 20px; 
+        }
+
+        #grad1 {
+            height:1200px;
+            background-color: #7a540b;
+            background-image: linear-gradient(#704900, #b07a16);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+    <nav>
+        <a class="active" href="zoohome.html">Home</a>
+        <a href="zooland.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="https://jer12345.carrd.co/" target="_blank">Contact</a>
+    </nav>
+    <div id="grad1">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="FF10.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="ff3.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="ff5.jpeg" style="width:100%">
+            </div>
+        
+            <div class="dot-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+       
+        <script>
+            var slideIndex = 0;
+            showSlides();
+        
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000);
+            }
+        </script>
+
+            <center>
+                <section id="home" class="container">
+                    <div class="intro">
+                        <h1>Welcome to my Zoo Kingdom!</h1>
+                        <p>Welcome to My Zoo Gallery Blog! This blog was created out of my passion for animals and pets. I have always been fascinated by the diversity of animals and the joy they bring to our lives. My goal with this blog is to showcase 
+                            the beauty and uniqueness of pets and animals around my neighborhood and share their stories.</p>
+                    </div>
+                    <div class="features">
+                        <div class="feature">
+                            <h3>Origin Stories</h3>
+                            <p>To own a pet is to have another family member. And to add another member to the family brings about new stories to tell and how they were brought up. In this blog, we ask each pet owner what led them to keep their pet and what its been like to have them as a part of their own.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Want to be a part?</h3>
+                            <p>Do you want to be a part of this blog? Feel free to contact me on the link below. I'd be happy to have you in this small little project of mine.</p>
+                            <a href="https://jer12345.carrd.co/" target="_blank">Contact me here<<</a>
+                    </div>
+                </section>
+                <p></p>
+                <a href="zooland.html" class="styled-button">Lets Get Started!</a>
+        </center>
+    </div>
+    <footer>
+        <footer class="footer-distributed">
+        
+              <div class="footer-left">
+        
+                <h3>Jerry<span>Industries</span></h3>
+        
+                <p class="footer-links">
+                    <a href="zoohome.html" class="link-1">Home</a>
+                    <a href="about.html">About Me</a>
+                    <a href="https://jer12345.carrd.co/" target="_blank">Socials</a>
+                </p>
+              </div>
+
+              <div class="footer-center">
+                <div>
+                  <i class="fa fa-map-marker"></i>
+                  <p><span>HUMCOM</span> F101, UBAGUIO</p>
+                </div>
+        
+                <div>
+                  <i class="fa fa-phone"></i>
+                  <p>+63 1234567890</p>
+                </div>
+        
+                <div>
+                  <i class="fa fa-envelope"></i>
+                  <p><a href="mailto:support@company.com">20232055@s.ubaguio.edu</a></p>
+                </div>
+        
+              </div>
+              <div class="footer-right">
+                <p class="footer-company-about">
+                  <span>Copyright (c) 2023 by Jeremiah</span>
+                  <span>All Rights Reserved</span>
+                </p>
+                </div>
+              </div>
+         </footer>
+</body>
+</html>
